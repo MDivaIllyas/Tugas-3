@@ -25,6 +25,7 @@ const dataTransaction = document.getElementById("data-transaction");
 
 let showTransaction = (transaction) => {``
     dataTransaction.innerHTML = ``;
+    console.log("perubahan");
 
     if (!transaction || transaction.length === 0) {
         dataTransaction.innerHTML = `
