@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesi 3 Bootcamp FE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Treasury Transaction Manager</h1>
+            <h3>treasury help to analysts and manage a list of transactions</h3>
+        </div>
+    </header>
+    
+    <main>
+        <div class="filter">
+            <div class="sort-filter">
+                <span>Sort Filter</span>
+                <div class="space-sort">
+                    <div class="sorting-line">
+                        <label for="group-sort">Sort</label>
+                        <select name="group-sort" id="group-sort">
+                            <option selected>Group By</option>
+                            <option value="amount">Amount</option>
+                            <option value="date">Date</option>
+                            <option value="customer">Customer</option>
+                        </select>
+                        <select name="sort-data" id="sort-data">
+                            <option selected>Sort By</option>
+                            <option value="asc">Ascending</option>
+                            <option value="dsc">Descending</option>
+                        </select>
+                    </div>
+                    <div class="algorithm-line">
+                        <label for="sort-algo">Algorithm</label>
+                        <select name="sort-algo" id="sort-algo">
+                            <option value="bubble">Bubble Sort</option>
+                            <option value="merge">Merge Sort</option>
+                        </select>
+                    </div>
+                    <button id="submit-sort">Submit</button>
+                </div>
+            </div>
+            <div class="search-filter">
+                <span>Search Filter</span>
+                <div class="space-search">
+                    <form class="search-form" action="#" method="GET">
+                        <div class="algorithm-row">
+                            <label for="search-algo">Search By</label>
+                            <select name="search-algo" id="search-algo">
+                                <option value="linear">Customer (linear Search)</option>
+                                <option value="binary">ID (Binary Search)</option>
+                            </select>
+                        </div>
+                        <div class="keyword-row">
+                            <label for="search">Keyword</label>
+                            <input type="text" name="search" id="search" placeholder="Search Transaction..." />
+                        </div>
+                        <button type="submit" id="submit-search">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="body">
+            <table class="transaction">
+                <thead>
+                    <tr>
+                        <th>#ID</th>
+                        <th>CUSTOMER</th>
+                        <th>$AMOUNT</th>
+                        <th>DATE</th>
+                        <th>TYPE</th>
+                    </tr>
+                </thead>
+                <tbody id="data-transaction">
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <span>&copy; 2025 Treasury Transaction Manager. By Muhammad Diva Illyas.</span>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

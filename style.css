@@ -1,0 +1,571 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: #626F47;  
+    --accent-color: #A4B465;    
+    --background-color: #F0BB78;
+    --text-color: #F5ECD5;
+    --footer-color: #111827;
+    --card-bg: white;
+}
+
+main{
+    background: linear-gradient(to bottom, var(--background-color), var(--text-color));
+}
+
+header {
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    padding: 30px;  
+}
+
+header div h1{
+    color: var(--text-color);
+    font-size: 50px;
+    text-align: center;
+}
+
+header div h3{
+    padding: 7px 0;
+    color: var(--background-color);
+    font-size: medium;
+    text-align: center;
+}
+
+footer{
+    background-color: var(--background-color);
+    padding: 30px;
+    text-align: center;
+    color: var(--card-bg);
+}
+
+main div.filter{
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+}
+
+.sort-filter span, .search-filter span{
+    display: inline-block;
+    margin-left: -25px;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 28px;
+    text-shadow: #F5ECD5;
+}
+
+.sort-filter div.space-sort, .search-filter div.space-search{
+    border: var(--primary-color) 0.5px solid;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: antiquewhite;
+    width: 500px;
+    height: 182px;
+}
+
+.space-sort div, .space-search div{
+    margin-bottom: 13px;
+}
+
+.space-sort div.sorting-line label, .space-sort div.algorithm-line label, .space-search div.algorithm-row label, .space-search div.keyword-row label{
+    display: flex;
+    align-items: center;
+}
+
+.space-sort div.sorting-line, .space-sort div.algorithm-line, .space-search div.algorithm-row, .space-search div.keyword-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.space-sort div select{
+    width: 43%;
+    padding: 10px;
+    border: var(--primary-color) 0.5px solid;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.space-sort div.algorithm-line select, .space-search div.algorithm-row select, .space-search div.keyword-row input{
+    width: 77%;
+    padding: 10px;
+    border: var(--primary-color) 0.5px solid;
+    border-radius: 8px;
+}
+
+.space-sort button, .space-search button{
+    width: 98.5%;
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: #eaeaea;
+    border: var(--primary-color) 0.5px solid;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.space-sort button:hover, .space-search button:hover{
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.search-filter div input{
+    padding: 10px;
+    border: var(--primary-color) 0.5px solid;
+    border-radius: 8px;
+}
+
+main div.body .transaction{
+    width: 100%;
+    max-width: 83%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+main div.body{
+    padding-bottom: 60px;
+}
+
+.transaction{
+    border-radius: 8px;
+    border-collapse: collapse;
+    background-color: var(--accent-color);
+}
+
+.transaction thead{
+    color: #eaeaea;
+}
+
+.transaction tbody tr:nth-child(odd){
+    background-color: var(--text-color);
+}
+
+.transaction tbody tr:nth-child(even){
+    background-color: rgba(245, 236, 213, 0.837)
+}
+
+.transaction tbody tr:nth-child(odd):hover, .transaction tbody tr:nth-child(even):hover{
+    background-color: #D5DEF5;
+}
+
+.transaction th, #data-transaction tr td{
+    padding: 20px 0;
+}
+
+#data-transaction tr td{
+    text-align: center;
+}
+
+@media (min-width: 320px) {
+    header div h1{
+        font-size: 35px;
+    }
+
+    header div h3{
+        font-size: small;
+    }
+
+    main div.filter{
+        display: block;
+        padding: 30px 10px;
+    }
+
+    .sort-filter span, .search-filter span{
+        font-size: 20px;
+        margin-left: 0;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sort-filter{
+        margin-bottom: 30px;
+    }
+
+    .sort-filter div.space-sort, .search-filter div.space-search{
+        border: var(--primary-color) 0.5px solid;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: antiquewhite;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 90%;
+        height: 215px;
+    }
+
+    .space-sort div.sorting-line label, .space-sort div.algorithm-line label, .space-search div.algorithm-row label, .space-search div.keyword-row label{
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .space-sort div.sorting-line, .space-sort div.algorithm-line, .space-search div.algorithm-row, .space-search div.keyword-row{
+        display: block;
+    }
+
+    .space-sort div.sorting-line select{
+        width: 47%;
+    }
+
+    .space-sort div.sorting-line select#group-sort{
+        margin-right: 8px;
+    }
+
+    .space-sort div.algorithm-line select, .space-search div.algorithm-row select, .space-search div.keyword-row input{
+        width: 100%;
+    }
+
+    .space-sort button, .space-search button{
+        width: 100%;
+        padding: 10px;
+        background-color: var(--accent-color);
+        color: #eaeaea;
+        border: var(--primary-color) 0.5px solid;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+
+    main div.body .transaction{
+        max-width: 85%;
+    }
+
+    footer{
+        font-size: small;
+    }
+}
+
+@media (min-width: 375px) {
+    header div h1{
+        font-size: 35px;
+    }
+
+    header div h3{
+        font-size: small;
+    }
+
+    main div.filter{
+        display: block;
+        padding: 30px 10px;
+    }
+
+    .sort-filter span, .search-filter span{
+        font-size: 20px;
+        margin-left: 0;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sort-filter{
+        margin-bottom: 30px;
+    }
+
+    .sort-filter div.space-sort, .search-filter div.space-search{
+        border: var(--primary-color) 0.5px solid;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: antiquewhite;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 90%;
+        height: 215px;
+    }
+
+    .space-sort div.sorting-line label, .space-sort div.algorithm-line label, .space-search div.algorithm-row label, .space-search div.keyword-row label{
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .space-sort div.sorting-line, .space-sort div.algorithm-line, .space-search div.algorithm-row, .space-search div.keyword-row{
+        display: block;
+    }
+
+    .space-sort div.sorting-line select{
+        width: 47%;
+    }
+
+    .space-sort div.sorting-line select#group-sort{
+        margin-right: 10px;
+    }
+
+    .space-sort div.algorithm-line select, .space-search div.algorithm-row select, .space-search div.keyword-row input{
+        width: 100%;
+    }
+
+    .space-sort button, .space-search button{
+        width: 100%;
+        padding: 10px;
+        background-color: var(--accent-color);
+        color: #eaeaea;
+        border: var(--primary-color) 0.5px solid;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+
+    main div.body .transaction{
+        max-width: 85%;
+    }
+
+    footer{
+        font-size: small;
+    }
+}
+
+@media (min-width: 768px) {
+    header div h1{
+        color: var(--text-color);
+        font-size: 50px;
+        text-align: center;
+    }
+
+    header div h3{
+        padding: 7px 0;
+        color: var(--background-color);
+        font-size: medium;
+        text-align: center;
+    }
+
+    footer{
+        background-color: var(--background-color);
+        padding: 30px;
+        text-align: center;
+    }
+
+    main div.filter{
+        display: block;
+        padding: 30px 10px;
+    }
+
+    .sort-filter span, .search-filter span{
+        font-size: 25px;
+        margin-left: 0;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sort-filter{
+        margin-bottom: 30px;
+    }
+
+    .sort-filter div.space-sort, .search-filter div.space-search{
+        border: var(--primary-color) 0.5px solid;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: antiquewhite;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 90%;
+        height: 215px;
+    }
+
+    .space-sort div.sorting-line label, .space-sort div.algorithm-line label, .space-search div.algorithm-row label, .space-search div.keyword-row label{
+        display: block;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .space-sort div.sorting-line, .space-sort div.algorithm-line, .space-search div.algorithm-row, .space-search div.keyword-row{
+        display: block;
+    }
+
+    .space-sort div.sorting-line select{
+        width: 49%;
+    }
+
+    .space-sort div.sorting-line select#group-sort{
+        margin-right: 6px;
+    }
+
+    .space-sort div.algorithm-line select, .space-search div.algorithm-row select, .space-search div.keyword-row input{
+        width: 100%;
+    }
+
+    .space-sort button, .space-search button{
+        width: 100%;
+        padding: 10px;
+        background-color: var(--accent-color);
+        color: #eaeaea;
+        border: var(--primary-color) 0.5px solid;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+
+    main div.body .transaction{
+        max-width: 85%;
+    }
+
+    footer{
+        font-size: small;
+    }
+}
+
+@media (min-width: 1024px){
+    header div h1{
+        font-size: 50px;
+    }
+
+    header div h3{
+        font-size: medium;
+    }
+
+    main div.filter{
+        display: flex;
+        justify-content: space-between;
+        padding: 50px;
+    }
+
+    .sort-filter span, .search-filter span{
+        font-size: 25px;
+        margin-left: -10px;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+
+    .sort-filter{
+        margin-bottom: 0;
+    }
+
+    .sort-filter div.space-sort, .search-filter div.space-search{
+        border: var(--primary-color) 0.5px solid;
+        border-radius: 8px;
+        padding: 20px;
+        background-color: antiquewhite;
+        width: 100%;
+        margin: 0 auto;
+        width: 420px;
+        max-width: 90%;
+        height: 182px;
+    }
+
+    .space-sort div.sorting-line label, .space-sort div.algorithm-line label, .space-search div.algorithm-row label, .space-search div.keyword-row label{
+        display: flex;
+        align-items: center;
+        font-size: medium;
+        margin-bottom: 0px;
+    }
+
+    .space-sort div.sorting-line, .space-sort div.algorithm-line, .space-search div.algorithm-row, .space-search div.keyword-row{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .space-sort div.sorting-line select{
+        width: 43%;
+    }
+
+    .space-sort div.sorting-line select#group-sort{
+        margin-right: 0;
+    }
+
+    .space-sort div.algorithm-line select, .space-search div.algorithm-row select, .space-search div.keyword-row input{
+        width: 75%;
+    }
+
+    .space-sort button, .space-search button{
+        width: 100%;
+        padding: 10px;
+        background-color: var(--accent-color);
+        color: #eaeaea;
+        border: var(--primary-color) 0.5px solid;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+
+    main div.body .transaction{
+        max-width: 85%;
+    }
+
+    footer{
+        font-size: medium;
+    }
+}
+
+@media (min-width: 1440px){
+    header div h1{
+        font-size: 50px;
+    }
+
+    header div h3{
+        font-size: medium;
+    }
+
+    main div.filter{
+        display: flex;
+        justify-content: space-between;
+        padding: 50px;
+    }
+
+    .sort-filter span, .search-filter span{
+        font-size: 28px;
+        margin-left: -25px;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+
+    .sort-filter{
+        margin-bottom: 0;
+    }
+
+    .sort-filter div.space-sort, .search-filter div.space-search{
+        border: var(--primary-color) 0.5px solid;
+        border-radius: 8px;
+        padding: 20px;
+        background-color: antiquewhite;
+        width: 100%;
+        margin: 0 auto;
+        width: 500px;
+        max-width: 90%;
+        height: 182px;
+    }
+
+    .space-sort div.sorting-line label, .space-sort div.algorithm-line label, .space-search div.algorithm-row label, .space-search div.keyword-row label{
+        display: flex;
+        align-items: center;
+        font-size: medium;
+        margin-bottom: 0px;
+    }
+
+    .space-sort div.sorting-line, .space-sort div.algorithm-line, .space-search div.algorithm-row, .space-search div.keyword-row{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .space-sort div.sorting-line select{
+        width: 43%;
+    }
+
+    .space-sort div.sorting-line select#group-sort{
+        margin-right: 0;
+    }
+
+    .space-sort div.algorithm-line select, .space-search div.algorithm-row select, .space-search div.keyword-row input{
+        width: 77%;
+    }
+
+    .space-sort button, .space-search button{
+        width: 100%;
+        padding: 10px;
+        background-color: var(--accent-color);
+        color: #eaeaea;
+        border: var(--primary-color) 0.5px solid;
+        border-radius: 8px;
+        font-size: 15px;
+    }
+
+    main div.body .transaction{
+        max-width: 83%;
+    }
+
+    footer{
+        font-size: medium;
+    }
+}
+
